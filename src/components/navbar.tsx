@@ -6,7 +6,7 @@ import { MobileSidebar } from "./sidebar/mobile-sidebar";
 
 export const Navbar = () => {
   return (
-    <nav className="h-16 flex justify-between items-center pr-8 shadow-md">
+    <nav className="h-16 flex justify-between items-center pr-8 shadow-md bg-white">
       <Link href="/" aria-label="Between Home">
         <Image
           src={betweenLogo}
