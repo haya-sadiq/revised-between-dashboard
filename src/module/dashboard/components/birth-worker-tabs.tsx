@@ -7,19 +7,22 @@ export const BirthworkerTabs = () => {
         My Birthworkers
       </h2>
 
-      <Tabs defaultValue="my-birthworker" className="w-full">
-        <TabsList
-          className="bg-transparent rounded-none gap-6 border-b
-      border-gray-200"
-        >
-          <TabsTrigger
-            value="my-birthworker"
-            className="rounded-none text-sm font-medium text-gray-800  hover:text-gray-800">
-            My Birthworker
-          </TabsTrigger>
-          <TabsTrigger value="search-birthworker"  className="rounded-none text-sm font-medium text-gray-800 hover:text-gray-800">
-            Search Birthworker
-          </TabsTrigger>
+      <Tabs defaultValue="my-birthworker" className="w-full border-b">
+        <TabsList className="bg-transparent rounded-none gap-6 ">
+          <div className="">
+            <TabsTrigger
+              value="my-birthworker"
+              className="rounded-none text-sm font-medium data-[state=active]:text-[#427174] hover:text-[#427174] data-[state=active]:shadow-none! border-0   border-transparent border-b-2  data-[state=active]:border-[#427174]"
+            >
+              My Birthworker
+            </TabsTrigger>
+            <TabsTrigger
+              value="search-birthworker"
+              className="rounded-none text-sm font-medium data-[state=active]:text-[#427174] hover:text-[#427174]  data-[state=active]:shadow-none! border-0   border-transparent border-b-2  data-[state=active]:border-[#427174]"
+            >
+              Search Birthworker
+            </TabsTrigger>
+          </div>
         </TabsList>
 
         {/* <TabsContent value="my-birthworker">

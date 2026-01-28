@@ -7,7 +7,8 @@ export const MobileSidebar = () => {
     <Sheet>
       <SheetTrigger asChild>
         <button
-          className="p-2 rounded-md hover:bg-gray-100 md:hidden"
+          className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 
+               text-gray-900 dark:text-gray-100 md:hidden"
           aria-label="Open menu"
         >
           <Menu />

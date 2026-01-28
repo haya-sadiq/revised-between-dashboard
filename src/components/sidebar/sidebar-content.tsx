@@ -7,13 +7,13 @@ const menuItems = [
   "Settings",
   "Help",
   "FAQs",
- 
+  
 ];
 
 export const SidebarContent = () => {
   return (
     <nav className="flex flex-col h-full">
-      <ul className="space-y-1">
+      <ul className="space-y-1 flex-1 overflow-y-auto">
         {menuItems.map((item,index) => {
           return (
             <li

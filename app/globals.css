@@ -9,7 +9,7 @@
 }
 
 @theme{
-  --breakpoint-xs:25rem;
+   --breakpoint-xs:30rem;
    --breakpoint-md-lg: 60rem;
 }
 
@@ -91,12 +91,12 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);

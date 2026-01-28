@@ -34,7 +34,7 @@ const WorkerCardData: WorkerCard[] = [
 
 export const WorkercardList = () => {
   return (
-    <div className="rounded-[20] px-6 py-1 shadow-md bg-white mt-4">
+    <div className="xs:rounded-[20] px-4 md-lg:px-6 xs:py-1 xs:shadow-md xs:bg-white mt-4 border border-gray-200">
       {WorkerCardData.map((item, index) => {
         const { profileImg, profileName, active, statusColor } = item;
         return (
