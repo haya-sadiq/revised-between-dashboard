@@ -3,7 +3,6 @@ import { BsCircleFill } from "react-icons/bs";
 import { FaChevronCircleDown } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
-
 interface WorkerCardProps {
   profileImg: StaticImageData;
   profileName: string;
@@ -14,9 +13,7 @@ interface WorkerCardProps {
 export const WorkerCard = (props: WorkerCardProps) => {
   const { profileImg, profileName, active, statusColor } = props;
   return (
-    // <div className="flex justify-between items-center my-4 shadow-md rounded-[20] py-3 px-6">
-      <div className="flex flex-wrap items-center justify-between gap-4 my-4 shadow-md rounded-[20] py-3 px-6">
-
+    <div className="flex items-center justify-between my-4 shadow-md rounded-[20] py-3 px-6">
       <div className="flex items-center gap-8 ">
         <Image
           src={profileImg}
@@ -27,7 +24,7 @@ export const WorkerCard = (props: WorkerCardProps) => {
           <h2 className="heading-font text-[#32575AFF] text-xl mb-4">
             {profileName}
           </h2>
-          <p className="flex items-center gap-1 text-[13px]">
+          <p className="flex items-center gap-1 text-[13px] text-gray-800">
             {/* TODO: how to do this in tailwind */}
             <span>
               <BsCircleFill style={{ color: statusColor }} />
@@ -35,11 +32,11 @@ export const WorkerCard = (props: WorkerCardProps) => {
             <span>{active}</span>
           </p>
           <div className="flex gap-3 text-[13px] max-md-lg:justify-between max-md-lg:w-66.5">
-            <p className="flex items-center gap-1">
+            <p className="flex items-center gap-1 text-gray-800">
               <FaChevronCircleDown className="text-[#427174]" />
               Birth support
             </p>
-            <p className="flex items-center gap-1">
+            <p className="flex items-center gap-1 text-gray-800">
               <FaChevronCircleDown className="text-[#427174]" />
               Lactation consultation
             </p>
@@ -50,7 +47,6 @@ export const WorkerCard = (props: WorkerCardProps) => {
     </div>
   );
 };
-
 
 function ViewButton() {
   return (

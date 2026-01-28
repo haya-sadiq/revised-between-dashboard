@@ -14,10 +14,10 @@ export const BirthworkerTabs = () => {
         >
           <TabsTrigger
             value="my-birthworker"
-            className="rounded-none text-sm font-medium">
+            className="rounded-none text-sm font-medium text-gray-800  hover:text-gray-800">
             My Birthworker
           </TabsTrigger>
-          <TabsTrigger value="search-birthworker">
+          <TabsTrigger value="search-birthworker"  className="rounded-none text-sm font-medium text-gray-800 hover:text-gray-800">
             Search Birthworker
           </TabsTrigger>
         </TabsList>

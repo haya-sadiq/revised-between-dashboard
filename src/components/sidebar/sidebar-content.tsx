@@ -7,16 +7,17 @@ const menuItems = [
   "Settings",
   "Help",
   "FAQs",
+ 
 ];
 
 export const SidebarContent = () => {
   return (
-    <div className="flex flex-col h-full">
+    <nav className="flex flex-col h-full">
       <ul className="space-y-1">
-        {menuItems.map((item) => {
+        {menuItems.map((item,index) => {
           return (
             <li
-              key={item}
+              key={index}
               className="py-3 pl-4 text-sm cursor-pointer text-gray-800 hover:bg-[#427174] hover:text-white font-medium"
             >
               {item}
@@ -29,6 +30,6 @@ export const SidebarContent = () => {
           Log out
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
