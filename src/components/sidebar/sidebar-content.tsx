@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const menuItems = [
   "My profile",
   "Appointments",
@@ -7,21 +10,63 @@ const menuItems = [
   "Settings",
   "Help",
   "FAQs",
-  
+];
+
+const navItems = [
+  {
+    label: "My profile",
+    href: "/profile",
+  },
+  {
+    label: "Appointments",
+    href: "/appointments",
+  },
+   {
+    label: "Birthworkers",
+    href: "/birthworkers",
+  },
+   {
+    label: "Services",
+    href: "/services",
+  },
+   {
+    label: "Payments",
+    href: "/payments",
+  },
+   {
+    label: "Settings",
+    href: "/settings",
+  },
+   {
+    label: "Help",
+    href: "/help",
+  },
+   {
+    label: "Faq",
+    href: "/faq",
+  },
 ];
 
 export const SidebarContent = () => {
+const pathname = usePathname();
   return (
     <nav className="flex flex-col h-full">
       <ul className="space-y-1 flex-1 overflow-y-auto">
-        {menuItems.map((item,index) => {
+        {navItems.map((item, index) => {
+          const isActive = item.href === pathname;
+          // href = /profile , pathname = birthworkers false
+          // href = /birhtworks, pathname = birhtworkers true
           return (
-            <li
-              key={index}
-              className="py-3 pl-4 text-sm cursor-pointer text-gray-800 hover:bg-[#427174] hover:text-white font-medium"
-            >
-              {item}
-            </li>
+            <Link key={index} href={item.href}>
+              <li
+                className={`block py-3 pl-4 text-sm font-medium cursor-pointer
+                ${isActive ? "bg-[#427174] text-white" : "text-gray-800"}
+                 
+                `}
+              >
+                {item.label}
+              </li>
+            </Link>
           );
         })}
       </ul>

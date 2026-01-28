@@ -8,7 +8,7 @@ export const BirthworkerTabs = () => {
       </h2>
 
       <Tabs defaultValue="my-birthworker" className="w-full border-b">
-        <TabsList className="bg-transparent rounded-none gap-6 ">
+        <TabsList className="bg-transparent rounded-none gap-6">
           <div className="">
             <TabsTrigger
               value="my-birthworker"

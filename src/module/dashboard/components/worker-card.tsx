@@ -53,7 +53,7 @@ export const WorkerCard = (props: WorkerCardProps) => {
 
 function ViewButton() {
   return (
-    <Button className="bg-[#427174] text-white text-[13px] font-medium xs:font-light hover:bg-slate-700">
+    <Button className="flex-1 bg-[#427174] text-white text-[13px] font-medium xs:font-light hover:bg-slate-700">
       View details
     </Button>
   );
